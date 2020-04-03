@@ -6,11 +6,13 @@ target 'jobHUMG' do
   use_frameworks!
 
   # Pods for jobHUMG
-	#Loading
+    #Loading
 	pod 'NVActivityIndicatorView'
-	#API
+    #API
 	pod 'SwiftyJSON'
  	pod 'Alamofire'
-	#Toast
+    #Toast
 	pod 'Toast-Swift'
+    #Image
+	pod 'Kingfisher'
 end
