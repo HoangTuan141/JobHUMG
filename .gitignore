@@ -5,3 +5,11 @@
 /Podfile.lock
 /jobHUMG/.DS_Store
 /.DS_Store
+jobHUMG/Pods/Kingfisher/Sources/Cache/MemoryStorage.swift
+jobHUMG/Pods/Kingfisher/Sources/General/ImageSource/ImageDataProvider.swift
+jobHUMG/Pods/Kingfisher/Sources/Image/ImageDrawing.swift
+jobHUMG/Pods/Kingfisher/Sources/Networking/ImageDataProcessor.swift
+jobHUMG/Pods/Kingfisher/Sources/Networking/ImageDownloader.swift
+jobHUMG/Pods/Kingfisher/Sources/Networking/ImageDownloaderDelegate.swift
+jobHUMG/Pods/Kingfisher/Sources/Networking/ImagePrefetcher.swift
+jobHUMG/Pods/Kingfisher/Sources/Networking/RedirectHandler.swift
