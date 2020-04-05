@@ -24,6 +24,22 @@
 		0E1DAE9E24373AC80033F1DD /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E1DAE9C24373AC80033F1DD /* ProfileVC.xib */; };
 		0E1DAEA124373AE80033F1DD /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1DAE9F24373AE80033F1DD /* HomeVC.swift */; };
 		0E1DAEA224373AE80033F1DD /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E1DAEA024373AE80033F1DD /* HomeVC.xib */; };
+		0E9FE4E824399240006F427C /* HomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9FE4E624399240006F427C /* HomeTableCell.swift */; };
+		0E9FE4E924399240006F427C /* HomeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E9FE4E724399240006F427C /* HomeTableCell.xib */; };
+		0E9FE4EC2439AE09006F427C /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9FE4EA2439AE09006F427C /* PostTableViewCell.swift */; };
+		0E9FE4ED2439AE09006F427C /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E9FE4EB2439AE09006F427C /* PostTableViewCell.xib */; };
+		0E9FE4F12439B2F1006F427C /* PostJobVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9FE4EF2439B2F1006F427C /* PostJobVC.swift */; };
+		0E9FE4F22439B2F1006F427C /* PostJobVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E9FE4F02439B2F1006F427C /* PostJobVC.xib */; };
+		0EE817C42439BAD8001F0521 /* PostFindJobVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE817C22439BAD8001F0521 /* PostFindJobVC.swift */; };
+		0EE817C52439BAD8001F0521 /* PostFindJobVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EE817C32439BAD8001F0521 /* PostFindJobVC.xib */; };
+		0EE817C92439BC92001F0521 /* PopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE817C72439BC92001F0521 /* PopupVC.swift */; };
+		0EE817CA2439BC92001F0521 /* PopupVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EE817C82439BC92001F0521 /* PopupVC.xib */; };
+		0EE817D2243A1D9E001F0521 /* PageViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE817D0243A1D9E001F0521 /* PageViewVC.swift */; };
+		0EE817D3243A1D9E001F0521 /* PageViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EE817D1243A1D9E001F0521 /* PageViewVC.xib */; };
+		0EE817D7243A23D4001F0521 /* RecruitmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE817D5243A23D4001F0521 /* RecruitmentVC.swift */; };
+		0EE817D8243A23D4001F0521 /* RecruitmentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EE817D6243A23D4001F0521 /* RecruitmentVC.xib */; };
+		0EE817DC243A2409001F0521 /* FindJobVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE817DA243A2409001F0521 /* FindJobVC.swift */; };
+		0EE817DD243A2409001F0521 /* FindJobVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EE817DB243A2409001F0521 /* FindJobVC.xib */; };
 		6728415624342BF200790CEE /* APIBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672840BB24342BF100790CEE /* APIBaseRequest.swift */; };
 		6728416324342BF200790CEE /* KeyboardHandlerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672840D224342BF100790CEE /* KeyboardHandlerScrollView.swift */; };
 		6728416424342BF200790CEE /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672840D424342BF100790CEE /* BaseTableView.swift */; };
@@ -104,6 +120,22 @@
 		0E1DAE9C24373AC80033F1DD /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		0E1DAE9F24373AE80033F1DD /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		0E1DAEA024373AE80033F1DD /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		0E9FE4E624399240006F427C /* HomeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableCell.swift; sourceTree = "<group>"; };
+		0E9FE4E724399240006F427C /* HomeTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableCell.xib; sourceTree = "<group>"; };
+		0E9FE4EA2439AE09006F427C /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		0E9FE4EB2439AE09006F427C /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		0E9FE4EF2439B2F1006F427C /* PostJobVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostJobVC.swift; sourceTree = "<group>"; };
+		0E9FE4F02439B2F1006F427C /* PostJobVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostJobVC.xib; sourceTree = "<group>"; };
+		0EE817C22439BAD8001F0521 /* PostFindJobVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFindJobVC.swift; sourceTree = "<group>"; };
+		0EE817C32439BAD8001F0521 /* PostFindJobVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostFindJobVC.xib; sourceTree = "<group>"; };
+		0EE817C72439BC92001F0521 /* PopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupVC.swift; sourceTree = "<group>"; };
+		0EE817C82439BC92001F0521 /* PopupVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupVC.xib; sourceTree = "<group>"; };
+		0EE817D0243A1D9E001F0521 /* PageViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewVC.swift; sourceTree = "<group>"; };
+		0EE817D1243A1D9E001F0521 /* PageViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageViewVC.xib; sourceTree = "<group>"; };
+		0EE817D5243A23D4001F0521 /* RecruitmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitmentVC.swift; sourceTree = "<group>"; };
+		0EE817D6243A23D4001F0521 /* RecruitmentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecruitmentVC.xib; sourceTree = "<group>"; };
+		0EE817DA243A2409001F0521 /* FindJobVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindJobVC.swift; sourceTree = "<group>"; };
+		0EE817DB243A2409001F0521 /* FindJobVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindJobVC.xib; sourceTree = "<group>"; };
 		5351E73A1FF77C005FDE64F4 /* Pods-jobHUMG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jobHUMG.release.xcconfig"; path = "Target Support Files/Pods-jobHUMG/Pods-jobHUMG.release.xcconfig"; sourceTree = "<group>"; };
 		672840BB24342BF100790CEE /* APIBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIBaseRequest.swift; sourceTree = "<group>"; };
 		672840D224342BF100790CEE /* KeyboardHandlerScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandlerScrollView.swift; sourceTree = "<group>"; };
@@ -228,6 +260,7 @@
 		0E1DAE9424373A7B0033F1DD /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
+				0E9FE4E524399208006F427C /* Cell */,
 				0E1DAE9F24373AE80033F1DD /* HomeVC.swift */,
 				0E1DAEA024373AE80033F1DD /* HomeVC.xib */,
 			);
@@ -250,6 +283,71 @@
 				0E1DAE9824373AB20033F1DD /* ReviewCompanyVC.xib */,
 			);
 			path = ReviewCompanyVC;
+			sourceTree = "<group>";
+		};
+		0E9FE4E524399208006F427C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0E9FE4E624399240006F427C /* HomeTableCell.swift */,
+				0E9FE4E724399240006F427C /* HomeTableCell.xib */,
+				0E9FE4EA2439AE09006F427C /* PostTableViewCell.swift */,
+				0E9FE4EB2439AE09006F427C /* PostTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0E9FE4EE2439B2CF006F427C /* PostJobVC */ = {
+			isa = PBXGroup;
+			children = (
+				0E9FE4EF2439B2F1006F427C /* PostJobVC.swift */,
+				0E9FE4F02439B2F1006F427C /* PostJobVC.xib */,
+			);
+			path = PostJobVC;
+			sourceTree = "<group>";
+		};
+		0EE817C12439BAB0001F0521 /* PostFindJobVC */ = {
+			isa = PBXGroup;
+			children = (
+				0EE817C22439BAD8001F0521 /* PostFindJobVC.swift */,
+				0EE817C32439BAD8001F0521 /* PostFindJobVC.xib */,
+			);
+			path = PostFindJobVC;
+			sourceTree = "<group>";
+		};
+		0EE817C62439BC76001F0521 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				0EE817C72439BC92001F0521 /* PopupVC.swift */,
+				0EE817C82439BC92001F0521 /* PopupVC.xib */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
+		0EE817CD243A1750001F0521 /* Tablayout */ = {
+			isa = PBXGroup;
+			children = (
+				0EE817D0243A1D9E001F0521 /* PageViewVC.swift */,
+				0EE817D1243A1D9E001F0521 /* PageViewVC.xib */,
+			);
+			path = Tablayout;
+			sourceTree = "<group>";
+		};
+		0EE817D4243A239A001F0521 /* Recruitment */ = {
+			isa = PBXGroup;
+			children = (
+				0EE817D5243A23D4001F0521 /* RecruitmentVC.swift */,
+				0EE817D6243A23D4001F0521 /* RecruitmentVC.xib */,
+			);
+			path = Recruitment;
+			sourceTree = "<group>";
+		};
+		0EE817D9243A23E7001F0521 /* FindJobVC */ = {
+			isa = PBXGroup;
+			children = (
+				0EE817DA243A2409001F0521 /* FindJobVC.swift */,
+				0EE817DB243A2409001F0521 /* FindJobVC.xib */,
+			);
+			path = FindJobVC;
 			sourceTree = "<group>";
 		};
 		672840B324342BF100790CEE /* Networking */ = {
@@ -513,6 +611,10 @@
 		6728413624342BF100790CEE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0EE817D9243A23E7001F0521 /* FindJobVC */,
+				0EE817D4243A239A001F0521 /* Recruitment */,
+				0EE817C12439BAB0001F0521 /* PostFindJobVC */,
+				0E9FE4EE2439B2CF006F427C /* PostJobVC */,
 				0E1DAE9624373A8A0033F1DD /* ReviewCompanyVC */,
 				0E1DAE9524373A830033F1DD /* ProfileVC */,
 				0E1DAE9424373A7B0033F1DD /* HomeVC */,
@@ -527,6 +629,8 @@
 		6728414124342BF100790CEE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0EE817CD243A1750001F0521 /* Tablayout */,
+				0EE817C62439BC76001F0521 /* Popup */,
 				6728414224342BF100790CEE /* View */,
 			);
 			path = Views;
@@ -699,14 +803,22 @@
 			files = (
 				0E1DAE82243723A20033F1DD /* LoginVC.xib in Resources */,
 				0E1DAE9E24373AC80033F1DD /* ProfileVC.xib in Resources */,
+				0EE817D3243A1D9E001F0521 /* PageViewVC.xib in Resources */,
 				67336B66241F0BBB00507258 /* LaunchScreen.storyboard in Resources */,
+				0EE817D8243A23D4001F0521 /* RecruitmentVC.xib in Resources */,
+				0E9FE4ED2439AE09006F427C /* PostTableViewCell.xib in Resources */,
 				0E1DAE90243736D10033F1DD /* ForgetPasswordVC.xib in Resources */,
+				0EE817C52439BAD8001F0521 /* PostFindJobVC.xib in Resources */,
+				0EE817CA2439BC92001F0521 /* PopupVC.xib in Resources */,
+				0E9FE4F22439B2F1006F427C /* PostJobVC.xib in Resources */,
+				0E9FE4E924399240006F427C /* HomeTableCell.xib in Resources */,
 				67336B63241F0BBB00507258 /* Assets.xcassets in Resources */,
 				0E1DAE8B24372DC90033F1DD /* RegisterVC.xib in Resources */,
 				672841B324342BF200790CEE /* Localizable.strings in Resources */,
 				0E1DAEA224373AE80033F1DD /* HomeVC.xib in Resources */,
 				0E1DAE9A24373AB20033F1DD /* ReviewCompanyVC.xib in Resources */,
 				67336B61241F0BB900507258 /* Main.storyboard in Resources */,
+				0EE817DD243A2409001F0521 /* FindJobVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,6 +872,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E1DAE7B24371C720033F1DD /* APIRequest.swift in Sources */,
+				0EE817DC243A2409001F0521 /* FindJobVC.swift in Sources */,
+				0E9FE4E824399240006F427C /* HomeTableCell.swift in Sources */,
 				672841A424342BF200790CEE /* Answer.swift in Sources */,
 				672841A324342BF200790CEE /* DB.swift in Sources */,
 				6728418124342BF200790CEE /* UITableViewCell+Extension.swift in Sources */,
@@ -770,6 +884,7 @@
 				0E1DAE8F243736D10033F1DD /* ForgetPasswordVC.swift in Sources */,
 				0E1DAEA124373AE80033F1DD /* HomeVC.swift in Sources */,
 				6728418C24342BF200790CEE /* CustomInteractor.swift in Sources */,
+				0EE817D7243A23D4001F0521 /* RecruitmentVC.swift in Sources */,
 				6728418024342BF200790CEE /* UICollectionReusableView+Extension.swift in Sources */,
 				6728416524342BF200790CEE /* BaseTextView.swift in Sources */,
 				6728417A24342BF200790CEE /* Int+Extension.swift in Sources */,
@@ -777,6 +892,10 @@
 				6728416324342BF200790CEE /* KeyboardHandlerScrollView.swift in Sources */,
 				6728416A24342BF200790CEE /* InsetTextField.swift in Sources */,
 				6728416B24342BF200790CEE /* GradientLayer.swift in Sources */,
+				0EE817C42439BAD8001F0521 /* PostFindJobVC.swift in Sources */,
+				0E9FE4F12439B2F1006F427C /* PostJobVC.swift in Sources */,
+				0E9FE4EC2439AE09006F427C /* PostTableViewCell.swift in Sources */,
+				0EE817C92439BC92001F0521 /* PopupVC.swift in Sources */,
 				6728419424342BF200790CEE /* ScreenUtils.swift in Sources */,
 				0E1DAE9924373AB20033F1DD /* ReviewCompanyVC.swift in Sources */,
 				6728415624342BF200790CEE /* APIBaseRequest.swift in Sources */,
@@ -818,6 +937,7 @@
 				6728419724342BF200790CEE /* SystemUtils.swift in Sources */,
 				6728417124342BF200790CEE /* RoundedView.swift in Sources */,
 				672841AF24342BF200790CEE /* CustomView.swift in Sources */,
+				0EE817D2243A1D9E001F0521 /* PageViewVC.swift in Sources */,
 				6728418524342BF200790CEE /* UIScrollView+Extension.swift in Sources */,
 				6728418624342BF200790CEE /* UITextField+Extension.swift in Sources */,
 				0E1DAE9D24373AC80033F1DD /* ProfileVC.swift in Sources */,

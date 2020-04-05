@@ -31,10 +31,40 @@ extension UIViewController {
         subViewController.didMove(toParent: self)
     }
     
+    func setTablayout(toView: UIView, leftView: UIViewController, rightView: UIViewController, leftTitle: String, rightTitle: String) {
+        let pageViewVC = PageViewVC()
+        pageViewVC.leftTitle = leftTitle
+        pageViewVC.rightTitle = rightTitle
+        pageViewVC.leftView = leftView
+        pageViewVC.rightView = rightView
+        self.addChild(pageViewVC)
+        toView.addSubview(pageViewVC.view)
+        pageViewVC.view.frame = view.bounds
+        pageViewVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        pageViewVC.didMove(toParent: self)
+    }
+    
     func showToast(mess: String, messColor: UIColor? , background: UIColor? , position: ToastPosition) {
         var toastStyle = ToastStyle()
         toastStyle.backgroundColor = background ?? .black
         toastStyle.messageColor = messColor ?? .white
         self.view.makeToast(mess, duration: 3.0, position: position, style: toastStyle)
     }
+    
+    func showPopup(title: String, subTitle: String, titleLeftButton: String, titleRightButton: String, onClickLeft: (() -> Void)?, onClickRight: (() -> Void)?) {
+        let popupVC = PopupVC()
+        popupVC.titleText = title
+        popupVC.subTitle = subTitle
+        popupVC.titleLeftButton = titleLeftButton
+        popupVC.titleRightButton = titleRightButton
+        popupVC.onClickLeft = {
+            onClickLeft?()
+        }
+        popupVC.onClickRight = {
+            onClickRight?()
+        }
+        popupVC.modalPresentationStyle = .overCurrentContext
+        self.present(popupVC, animated: false, completion: nil)
+    }
 }
+

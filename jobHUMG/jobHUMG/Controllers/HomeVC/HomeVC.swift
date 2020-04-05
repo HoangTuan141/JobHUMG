@@ -9,22 +9,21 @@
 import UIKit
 
 class HomeVC: UIViewController {
-
+   
+    @IBOutlet weak var tablayoutView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.setTablayout(toView: tablayoutView, leftView: RecruitmentVC(), rightView: FindJobVC(), leftTitle: "TUYỂN DỤNG", rightTitle: "TÌM VIỆC")
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func postPressed(_ sender: Any) {
+        self.showPopup(title: "Đăng bài", subTitle: "Chọn loại bài đăng", titleLeftButton: "Tuyển dụng", titleRightButton: "Tìm việc", onClickLeft: {
+            let postJobVC = PostJobVC()
+            self.navigationController?.pushViewController(postJobVC, animated: true)
+        }, onClickRight:{
+            let postFindJobVC = PostFindJobVC()
+            self.navigationController?.pushViewController(postFindJobVC, animated: true)
+        })
     }
-    */
-
+    
 }

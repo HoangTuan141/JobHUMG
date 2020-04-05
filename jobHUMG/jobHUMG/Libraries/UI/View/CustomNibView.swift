@@ -25,7 +25,7 @@ class CustomNibView: UIView {
     }
 
     // MARK: - Setup
-    private func setup() {
+    func setup() {
         guard let xibName = NSStringFromClass(type(of: self)).components(separatedBy: ".").last else { return }
         Bundle(for: type(of: self)).loadNibNamed(xibName, owner: self, options: nil)
         frame.size = contentView.frame.size
