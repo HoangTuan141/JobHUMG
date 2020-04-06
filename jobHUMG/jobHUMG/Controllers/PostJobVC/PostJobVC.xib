@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostJobVC" customModule="jobHUMG" customModuleProvider="target">
             <connections>
+                <outlet property="addressTextView" destination="psR-6k-xu4" id="S6w-i7-me9"/>
+                <outlet property="careerTextField" destination="in5-1J-S7Z" id="JLb-du-1Z9"/>
+                <outlet property="companyTextField" destination="yok-a2-lU5" id="CEI-Vm-ndo"/>
+                <outlet property="descriptionTextView" destination="lJT-Br-dup" id="llP-RL-xKG"/>
+                <outlet property="heightAddressTextView" destination="CDt-hb-gAd" id="4po-vC-haa"/>
+                <outlet property="heightDescriptionTextView" destination="dkp-q8-Duk" id="dNq-Pl-CLq"/>
+                <outlet property="postButton" destination="6Qt-ox-wvA" id="qF1-8Z-Ek6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -39,6 +46,9 @@
                             <state key="normal" title="Đăng">
                                 <color key="titleColor" red="0.59607843140000005" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="postPressed:" destination="-1" eventType="touchUpInside" id="nMl-Hr-6Wm"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tạo bài viết" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8f-xf-UpB">
                             <rect key="frame" x="163" y="12.5" width="88" height="19.5"/>
@@ -71,7 +81,7 @@
                     <rect key="frame" x="0.0" y="91" width="414" height="771"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwM-aq-6LQ">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="329"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="317"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6HD-lK-sD0">
                                     <rect key="frame" x="0.0" y="17" width="414" height="55"/>
@@ -145,24 +155,24 @@
                                     <color key="textColor" red="0.25882352939999997" green="0.63529411759999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psR-6k-xu4">
-                                    <rect key="frame" x="23" y="185" width="368" height="50"/>
-                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psR-6k-xu4" customClass="PlaceholderTextView" customModule="jobHUMG" customModuleProvider="target">
+                                    <rect key="frame" x="23" y="185" width="368" height="44"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="CDt-hb-gAd"/>
+                                        <constraint firstAttribute="height" constant="44" id="CDt-hb-gAd"/>
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mô tả" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzg-Fx-ZWZ">
-                                    <rect key="frame" x="23" y="252" width="37" height="17"/>
+                                    <rect key="frame" x="23" y="246" width="37" height="17"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" red="0.25882352939999997" green="0.63529411759999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJT-Br-dup">
-                                    <rect key="frame" x="23" y="269" width="368" height="50"/>
-                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJT-Br-dup" customClass="PlaceholderTextView" customModule="jobHUMG" customModuleProvider="target">
+                                    <rect key="frame" x="23" y="263" width="368" height="44"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="dkp-q8-Duk"/>
+                                        <constraint firstAttribute="height" constant="44" id="dkp-q8-Duk"/>
                                     </constraints>
                                 </view>
                             </subviews>
