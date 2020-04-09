@@ -15,7 +15,7 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var agreePolicyButton: UIButton!
     @IBOutlet weak var policyLabel: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var RetypePasswordTextField: UITextField!
+    @IBOutlet weak var reTypePasswordTextField: UITextField!
     
     private var isSelectedPolicy = false
     //MARK: LIFE CYCLE
@@ -28,6 +28,10 @@ class RegisterVC: UIViewController {
     //MARK: - FUNCTION
     private func setupView() {
         policyLabel.underlineAttribute(text: "Tôi đã đọc và đồng ý với điều khoản sử dụng")
+        self.endEditting()
+        accountTextField.delegate = self
+        passwordTextField.delegate = self
+        reTypePasswordTextField.delegate = self
     }
     
     //MARK: - ACTION
@@ -45,9 +49,24 @@ class RegisterVC: UIViewController {
     }
     
     @IBAction func showPolicyPressed(_ sender: Any) {
+        
     }
     
     @IBAction func registerPressed(_ sender: Any) {
+        
     }
     
+}
+
+extension RegisterVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == accountTextField {
+            passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            reTypePasswordTextField.becomeFirstResponder()
+        } else if textField == reTypePasswordTextField {
+            reTypePasswordTextField.resignFirstResponder()
+        }
+        return true
+    }
 }

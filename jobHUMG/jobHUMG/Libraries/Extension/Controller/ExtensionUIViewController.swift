@@ -23,6 +23,16 @@ extension UIViewController: NVActivityIndicatorViewable {
 }
 
 extension UIViewController {
+    
+    func endEditting(){
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
+    }
+    
     func addViewControllerToView(view: UIView, subViewController: UIViewController) {
         self.addChild(subViewController)
         view.addSubview(subViewController.view)
@@ -39,7 +49,7 @@ extension UIViewController {
         pageViewVC.rightView = rightView
         self.addChild(pageViewVC)
         toView.addSubview(pageViewVC.view)
-        pageViewVC.view.frame = view.bounds
+        pageViewVC.view.frame = toView.bounds
         pageViewVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         pageViewVC.didMove(toParent: self)
     }

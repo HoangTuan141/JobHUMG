@@ -9,6 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostFindJobVC" customModule="jobHUMG" customModuleProvider="target">
             <connections>
+                <outlet property="careerTextField" destination="dhb-IO-z1U" id="tL0-DO-5Xm"/>
+                <outlet property="descriptionTextView" destination="cNh-fp-arf" id="Gds-Ix-Sgq"/>
+                <outlet property="heightDescriptionTextView" destination="E70-R6-2to" id="ohr-yD-tze"/>
+                <outlet property="heightRegionTextView" destination="Ph1-e4-XqU" id="suJ-YV-Ycc"/>
+                <outlet property="regionTextView" destination="C7n-2c-4n3" id="Ln0-o6-gI9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -71,7 +76,7 @@
                     <rect key="frame" x="0.0" y="91" width="414" height="771"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1f-nZ-ghm">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="257"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="223"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nFv-To-FTK">
                                     <rect key="frame" x="0.0" y="17" width="414" height="55"/>
@@ -106,39 +111,46 @@
                                         <constraint firstAttribute="height" constant="1" id="Zyg-Xm-rV5"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vuG-E5-tvb">
-                                    <rect key="frame" x="23" y="162" width="368" height="1"/>
-                                    <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="1" id="Lj7-so-IMg"/>
-                                    </constraints>
-                                </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7n-2c-4n3">
-                                    <rect key="frame" x="23" y="112" width="368" height="50"/>
-                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="Ph1-e4-XqU"/>
-                                    </constraints>
-                                </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mô tả" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7H-Gu-yeR">
-                                    <rect key="frame" x="23" y="180" width="37" height="17"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <color key="textColor" red="0.25882352939999997" green="0.63529411759999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNh-fp-arf">
-                                    <rect key="frame" x="23" y="197" width="368" height="50"/>
-                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="E70-R6-2to"/>
-                                    </constraints>
-                                </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khu vực" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbA-oC-i3e">
                                     <rect key="frame" x="23" y="90" width="53" height="17"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" red="0.25882352939999997" green="0.63529411759999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7n-2c-4n3" customClass="PlaceholderTextView" customModule="jobHUMG" customModuleProvider="target">
+                                    <rect key="frame" x="23" y="112" width="368" height="33"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="Ph1-e4-XqU"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vuG-E5-tvb">
+                                    <rect key="frame" x="23" y="145" width="368" height="1"/>
+                                    <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="Lj7-so-IMg"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mô tả" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7H-Gu-yeR">
+                                    <rect key="frame" x="23" y="163" width="37" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.25882352939999997" green="0.63529411759999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNh-fp-arf" customClass="PlaceholderTextView" customModule="jobHUMG" customModuleProvider="target">
+                                    <rect key="frame" x="23" y="180" width="368" height="33"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="E70-R6-2to"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dn-NF-olq">
+                                    <rect key="frame" x="23" y="214" width="368" height="1"/>
+                                    <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="L47-BE-41y"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
@@ -146,6 +158,8 @@
                                 <constraint firstItem="NbA-oC-i3e" firstAttribute="leading" secondItem="h1f-nZ-ghm" secondAttribute="leading" constant="23" id="5ka-Zb-ZE9"/>
                                 <constraint firstAttribute="trailing" secondItem="C7n-2c-4n3" secondAttribute="trailing" constant="23" id="8uh-dz-RxJ"/>
                                 <constraint firstItem="G7H-Gu-yeR" firstAttribute="top" secondItem="vuG-E5-tvb" secondAttribute="bottom" constant="17" id="B0E-Xm-W08"/>
+                                <constraint firstItem="2dn-NF-olq" firstAttribute="top" secondItem="cNh-fp-arf" secondAttribute="bottom" constant="1" id="CuU-vB-hHc"/>
+                                <constraint firstAttribute="trailing" secondItem="2dn-NF-olq" secondAttribute="trailing" constant="23" id="Djo-nH-aWi"/>
                                 <constraint firstAttribute="trailing" secondItem="vuG-E5-tvb" secondAttribute="trailing" constant="23" id="H3N-z2-OBf"/>
                                 <constraint firstItem="G7H-Gu-yeR" firstAttribute="leading" secondItem="h1f-nZ-ghm" secondAttribute="leading" constant="23" id="HgM-vV-Fr0"/>
                                 <constraint firstItem="vuG-E5-tvb" firstAttribute="leading" secondItem="h1f-nZ-ghm" secondAttribute="leading" constant="23" id="Jlm-HQ-Iim"/>
@@ -153,6 +167,7 @@
                                 <constraint firstItem="NbA-oC-i3e" firstAttribute="top" secondItem="6u9-tm-Zxd" secondAttribute="bottom" constant="17" id="PBC-ec-koI"/>
                                 <constraint firstItem="cNh-fp-arf" firstAttribute="leading" secondItem="h1f-nZ-ghm" secondAttribute="leading" constant="23" id="PUm-E8-anO"/>
                                 <constraint firstItem="nFv-To-FTK" firstAttribute="top" secondItem="h1f-nZ-ghm" secondAttribute="top" constant="17" id="YL4-dP-7ol"/>
+                                <constraint firstItem="2dn-NF-olq" firstAttribute="leading" secondItem="h1f-nZ-ghm" secondAttribute="leading" constant="23" id="aBu-m2-JVU"/>
                                 <constraint firstItem="C7n-2c-4n3" firstAttribute="leading" secondItem="h1f-nZ-ghm" secondAttribute="leading" constant="23" id="cMZ-8r-DOR"/>
                                 <constraint firstItem="nFv-To-FTK" firstAttribute="leading" secondItem="h1f-nZ-ghm" secondAttribute="leading" id="cNv-Of-TRc"/>
                                 <constraint firstAttribute="trailing" secondItem="6u9-tm-Zxd" secondAttribute="trailing" constant="23" id="gdN-0p-DaJ"/>

@@ -9,6 +9,7 @@
 import UIKit
 
 class PostJobVC: UIViewController {
+    @IBOutlet weak var salaryTextField: UITextField!
     @IBOutlet weak var careerTextField: UITextField!
     @IBOutlet weak var companyTextField: UITextField!
     @IBOutlet weak var addressTextView: PlaceholderTextView!
@@ -25,10 +26,16 @@ class PostJobVC: UIViewController {
     
     private func setupView() {
         addressTextView.placeholder = "Nhập địa chỉ công ty"
-        addressTextView.padding = UIEdgeInsets(top: 14, left: 14, bottom: 14, right: 14)
         addressTextView.heightDidChange = { [weak self] height in
-            self?.heightAddressTextView.constant = height > 44 ? height : 44
-    }
+            self?.heightAddressTextView.constant = height > 33 ? height : 33
+            if height > 66 {
+                self?.heightAddressTextView.constant = 66
+            }
+        }
+        descriptionTextView.placeholder = "Nhập mô tả công việc"
+        descriptionTextView.heightDidChange = { [weak self] height in
+            self?.heightDescriptionTextView.constant = height > 33 ? height : 33
+        }
     }
     
     @IBAction func backPressed(_ sender: Any) {

@@ -26,6 +26,9 @@ class LoginVC: UIViewController {
     private func setupView() {
         registerLabel.underlineAttribute(text: "Đăng ký")
         forgetPasswordLabel.underlineAttribute(text: "Quên mật khẩu")
+        accountTextField.delegate = self
+        passwordTextField.delegate = self
+        self.endEditting()
     }
     
     //MARK: - ACTION
@@ -44,4 +47,15 @@ class LoginVC: UIViewController {
     @IBAction func forgetPasswordPressed(_ sender: Any) {
     }
     
+}
+
+extension LoginVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == accountTextField {
+            passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            passwordTextField.resignFirstResponder()
+        }
+        return true
+    }
 }
