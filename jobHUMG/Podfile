@@ -15,4 +15,6 @@ target 'jobHUMG' do
 	pod 'Toast-Swift'
     #Image
 	pod 'Kingfisher'
+    #Rate
+	pod 'Cosmos'
 end

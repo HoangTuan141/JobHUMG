@@ -28,6 +28,18 @@
 		0E346948243F7632003C6E8E /* DetailPostFindJobVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E346946243F7632003C6E8E /* DetailPostFindJobVC.xib */; };
 		0E3F0C87243B7BF4001E2B48 /* RecruitmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3F0C85243B7BF4001E2B48 /* RecruitmentCell.swift */; };
 		0E3F0C88243B7BF4001E2B48 /* RecruitmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E3F0C86243B7BF4001E2B48 /* RecruitmentCell.xib */; };
+		0E53983E2444B1B700EC10C3 /* ReviewCompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E53983C2444B1B700EC10C3 /* ReviewCompanyCell.swift */; };
+		0E53983F2444B1B700EC10C3 /* ReviewCompanyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E53983D2444B1B700EC10C3 /* ReviewCompanyCell.xib */; };
+		0E5398432444C05700EC10C3 /* CreateReviewCompanyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5398412444C05700EC10C3 /* CreateReviewCompanyVC.swift */; };
+		0E5398442444C05700EC10C3 /* CreateReviewCompanyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E5398422444C05700EC10C3 /* CreateReviewCompanyVC.xib */; };
+		0E68CE06244754DB00BAAAA8 /* DetailReviewCompanyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68CE04244754DB00BAAAA8 /* DetailReviewCompanyVC.swift */; };
+		0E68CE07244754DB00BAAAA8 /* DetailReviewCompanyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68CE05244754DB00BAAAA8 /* DetailReviewCompanyVC.xib */; };
+		0E68CE0F244756A300BAAAA8 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68CE0D244756A300BAAAA8 /* ReviewTableViewCell.swift */; };
+		0E68CE10244756A300BAAAA8 /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68CE0E244756A300BAAAA8 /* ReviewTableViewCell.xib */; };
+		0E68CE1524476AFB00BAAAA8 /* SearchCompanyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68CE1324476AFB00BAAAA8 /* SearchCompanyVC.swift */; };
+		0E68CE1624476AFB00BAAAA8 /* SearchCompanyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68CE1424476AFB00BAAAA8 /* SearchCompanyVC.xib */; };
+		0E68CE1924476D5800BAAAA8 /* SearchCompanyTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68CE1724476D5800BAAAA8 /* SearchCompanyTableCell.swift */; };
+		0E68CE1A24476D5800BAAAA8 /* SearchCompanyTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68CE1824476D5800BAAAA8 /* SearchCompanyTableCell.xib */; };
 		0E6A78FA243ED00F001A786B /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A78F8243ED00F001A786B /* CommentTableViewCell.swift */; };
 		0E6A78FB243ED00F001A786B /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E6A78F9243ED00F001A786B /* CommentTableViewCell.xib */; };
 		0E93C2FF243DC521003DE6B8 /* FindJobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E93C2FD243DC521003DE6B8 /* FindJobTableViewCell.swift */; };
@@ -132,6 +144,18 @@
 		0E346946243F7632003C6E8E /* DetailPostFindJobVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPostFindJobVC.xib; sourceTree = "<group>"; };
 		0E3F0C85243B7BF4001E2B48 /* RecruitmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitmentCell.swift; sourceTree = "<group>"; };
 		0E3F0C86243B7BF4001E2B48 /* RecruitmentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecruitmentCell.xib; sourceTree = "<group>"; };
+		0E53983C2444B1B700EC10C3 /* ReviewCompanyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCompanyCell.swift; sourceTree = "<group>"; };
+		0E53983D2444B1B700EC10C3 /* ReviewCompanyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewCompanyCell.xib; sourceTree = "<group>"; };
+		0E5398412444C05700EC10C3 /* CreateReviewCompanyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReviewCompanyVC.swift; sourceTree = "<group>"; };
+		0E5398422444C05700EC10C3 /* CreateReviewCompanyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateReviewCompanyVC.xib; sourceTree = "<group>"; };
+		0E68CE04244754DB00BAAAA8 /* DetailReviewCompanyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReviewCompanyVC.swift; sourceTree = "<group>"; };
+		0E68CE05244754DB00BAAAA8 /* DetailReviewCompanyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailReviewCompanyVC.xib; sourceTree = "<group>"; };
+		0E68CE0D244756A300BAAAA8 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
+		0E68CE0E244756A300BAAAA8 /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
+		0E68CE1324476AFB00BAAAA8 /* SearchCompanyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCompanyVC.swift; sourceTree = "<group>"; };
+		0E68CE1424476AFB00BAAAA8 /* SearchCompanyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCompanyVC.xib; sourceTree = "<group>"; };
+		0E68CE1724476D5800BAAAA8 /* SearchCompanyTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCompanyTableCell.swift; sourceTree = "<group>"; };
+		0E68CE1824476D5800BAAAA8 /* SearchCompanyTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCompanyTableCell.xib; sourceTree = "<group>"; };
 		0E6A78F8243ED00F001A786B /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		0E6A78F9243ED00F001A786B /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		0E93C2FD243DC521003DE6B8 /* FindJobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindJobTableViewCell.swift; sourceTree = "<group>"; };
@@ -296,6 +320,7 @@
 		0E1DAE9624373A8A0033F1DD /* ReviewCompanyVC */ = {
 			isa = PBXGroup;
 			children = (
+				0E53983B2444B19200EC10C3 /* Cell */,
 				0E1DAE9724373AB20033F1DD /* ReviewCompanyVC.swift */,
 				0E1DAE9824373AB20033F1DD /* ReviewCompanyVC.xib */,
 			);
@@ -317,6 +342,62 @@
 			children = (
 				0E3F0C85243B7BF4001E2B48 /* RecruitmentCell.swift */,
 				0E3F0C86243B7BF4001E2B48 /* RecruitmentCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0E53983B2444B19200EC10C3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0E53983C2444B1B700EC10C3 /* ReviewCompanyCell.swift */,
+				0E53983D2444B1B700EC10C3 /* ReviewCompanyCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0E5398402444C00C00EC10C3 /* CreatReviewCompanyVC */ = {
+			isa = PBXGroup;
+			children = (
+				0E5398412444C05700EC10C3 /* CreateReviewCompanyVC.swift */,
+				0E5398422444C05700EC10C3 /* CreateReviewCompanyVC.xib */,
+			);
+			path = CreatReviewCompanyVC;
+			sourceTree = "<group>";
+		};
+		0E68CE03244754BB00BAAAA8 /* DetailReviewCompanyVC */ = {
+			isa = PBXGroup;
+			children = (
+				0E68CE082447565600BAAAA8 /* Cell */,
+				0E68CE04244754DB00BAAAA8 /* DetailReviewCompanyVC.swift */,
+				0E68CE05244754DB00BAAAA8 /* DetailReviewCompanyVC.xib */,
+			);
+			path = DetailReviewCompanyVC;
+			sourceTree = "<group>";
+		};
+		0E68CE082447565600BAAAA8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0E68CE0D244756A300BAAAA8 /* ReviewTableViewCell.swift */,
+				0E68CE0E244756A300BAAAA8 /* ReviewTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0E68CE1224476ACB00BAAAA8 /* SearchCompanyVC */ = {
+			isa = PBXGroup;
+			children = (
+				0E68CE1B24476D5F00BAAAA8 /* Cell */,
+				0E68CE1324476AFB00BAAAA8 /* SearchCompanyVC.swift */,
+				0E68CE1424476AFB00BAAAA8 /* SearchCompanyVC.xib */,
+			);
+			path = SearchCompanyVC;
+			sourceTree = "<group>";
+		};
+		0E68CE1B24476D5F00BAAAA8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0E68CE1724476D5800BAAAA8 /* SearchCompanyTableCell.swift */,
+				0E68CE1824476D5800BAAAA8 /* SearchCompanyTableCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -674,12 +755,15 @@
 		6728413624342BF100790CEE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0E68CE1224476ACB00BAAAA8 /* SearchCompanyVC */,
+				0E68CE03244754BB00BAAAA8 /* DetailReviewCompanyVC */,
+				0E5398402444C00C00EC10C3 /* CreatReviewCompanyVC */,
+				0E1DAE9624373A8A0033F1DD /* ReviewCompanyVC */,
 				0E34694A243F7B4A003C6E8E /* DetailPost */,
 				0EE817C12439BAB0001F0521 /* PostFindJobVC */,
 				0E9FE4EE2439B2CF006F427C /* PostJobVC */,
-				0E1DAE9624373A8A0033F1DD /* ReviewCompanyVC */,
-				0E1DAE9524373A830033F1DD /* ProfileVC */,
 				0E1DAE9424373A7B0033F1DD /* HomeVC */,
+				0E1DAE9524373A830033F1DD /* ProfileVC */,
 				0E1DAE91243739950033F1DD /* Tabbar */,
 				0E1DAE8C243736AA0033F1DD /* ForgetPasswordVC */,
 				0E1DAE8724372D940033F1DD /* RegisterVC */,
@@ -873,13 +957,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E68CE1A24476D5800BAAAA8 /* SearchCompanyTableCell.xib in Resources */,
 				0E346948243F7632003C6E8E /* DetailPostFindJobVC.xib in Resources */,
 				0E1DAE82243723A20033F1DD /* LoginVC.xib in Resources */,
+				0E68CE07244754DB00BAAAA8 /* DetailReviewCompanyVC.xib in Resources */,
 				0E1DAE9E24373AC80033F1DD /* ProfileVC.xib in Resources */,
+				0E53983F2444B1B700EC10C3 /* ReviewCompanyCell.xib in Resources */,
 				0EE817D3243A1D9E001F0521 /* PageViewVC.xib in Resources */,
 				67336B66241F0BBB00507258 /* LaunchScreen.storyboard in Resources */,
 				0E6A78FB243ED00F001A786B /* CommentTableViewCell.xib in Resources */,
 				0E93C300243DC521003DE6B8 /* FindJobTableViewCell.xib in Resources */,
+				0E68CE10244756A300BAAAA8 /* ReviewTableViewCell.xib in Resources */,
 				0EE817D8243A23D4001F0521 /* RecruitmentVC.xib in Resources */,
 				0E93C306243DCB06003DE6B8 /* DetailPostJobVC.xib in Resources */,
 				0E1DAE90243736D10033F1DD /* ForgetPasswordVC.xib in Resources */,
@@ -887,9 +975,11 @@
 				0EE817CA2439BC92001F0521 /* PopupVC.xib in Resources */,
 				0E9FE4F22439B2F1006F427C /* PostJobVC.xib in Resources */,
 				67336B63241F0BBB00507258 /* Assets.xcassets in Resources */,
+				0E68CE1624476AFB00BAAAA8 /* SearchCompanyVC.xib in Resources */,
 				0E1DAE8B24372DC90033F1DD /* RegisterVC.xib in Resources */,
 				0E3F0C88243B7BF4001E2B48 /* RecruitmentCell.xib in Resources */,
 				672841B324342BF200790CEE /* Localizable.strings in Resources */,
+				0E5398442444C05700EC10C3 /* CreateReviewCompanyVC.xib in Resources */,
 				67B8B640243ABA0200FD9A18 /* PlaceholderTextView.xib in Resources */,
 				0E1DAEA224373AE80033F1DD /* HomeVC.xib in Resources */,
 				0E1DAE9A24373AB20033F1DD /* ReviewCompanyVC.xib in Resources */,
@@ -969,11 +1059,13 @@
 				6728417A24342BF200790CEE /* Int+Extension.swift in Sources */,
 				6728416724342BF200790CEE /* ColorImageView.swift in Sources */,
 				6728416324342BF200790CEE /* KeyboardHandlerScrollView.swift in Sources */,
+				0E5398432444C05700EC10C3 /* CreateReviewCompanyVC.swift in Sources */,
 				6728416A24342BF200790CEE /* InsetTextField.swift in Sources */,
 				6728416B24342BF200790CEE /* GradientLayer.swift in Sources */,
 				0EE817C42439BAD8001F0521 /* PostFindJobVC.swift in Sources */,
 				0E9FE4F12439B2F1006F427C /* PostJobVC.swift in Sources */,
 				0EE817C92439BC92001F0521 /* PopupVC.swift in Sources */,
+				0E68CE1924476D5800BAAAA8 /* SearchCompanyTableCell.swift in Sources */,
 				6728419424342BF200790CEE /* ScreenUtils.swift in Sources */,
 				0E1DAE9924373AB20033F1DD /* ReviewCompanyVC.swift in Sources */,
 				6728415624342BF200790CEE /* APIBaseRequest.swift in Sources */,
@@ -982,6 +1074,7 @@
 				6728416F24342BF200790CEE /* TapActionView.swift in Sources */,
 				0E1DAE93243739C00033F1DD /* Tabbar.swift in Sources */,
 				0E3F0C87243B7BF4001E2B48 /* RecruitmentCell.swift in Sources */,
+				0E68CE0F244756A300BAAAA8 /* ReviewTableViewCell.swift in Sources */,
 				6728417C24342BF200790CEE /* UILabel+Extension.swift in Sources */,
 				0E1DAE8A24372DC90033F1DD /* RegisterVC.swift in Sources */,
 				6728416824342BF200790CEE /* BaseCollectionView.swift in Sources */,
@@ -989,9 +1082,11 @@
 				6728418A24342BF200790CEE /* String+Extension.swift in Sources */,
 				6728417B24342BF200790CEE /* UIImageView+Extension.swift in Sources */,
 				67336B5E241F0BB900507258 /* ViewController.swift in Sources */,
+				0E53983E2444B1B700EC10C3 /* ReviewCompanyCell.swift in Sources */,
 				6728418724342BF200790CEE /* UITableView+Extension.swift in Sources */,
 				672841A524342BF200790CEE /* Owner.swift in Sources */,
 				6728417D24342BF200790CEE /* UIButton+Extension.swift in Sources */,
+				0E68CE06244754DB00BAAAA8 /* DetailReviewCompanyVC.swift in Sources */,
 				0E1DAE7C24371C720033F1DD /* APIService.swift in Sources */,
 				672841B624342BF200790CEE /* Font.swift in Sources */,
 				6728419324342BF200790CEE /* FileManagerUtils.swift in Sources */,
@@ -1002,6 +1097,7 @@
 				6728417E24342BF200790CEE /* UIView+Extension.swift in Sources */,
 				0E1DAE81243723A20033F1DD /* LoginVC.swift in Sources */,
 				6728418224342BF200790CEE /* UICollectionView+Extension.swift in Sources */,
+				0E68CE1524476AFB00BAAAA8 /* SearchCompanyVC.swift in Sources */,
 				6728418824342BF200790CEE /* UICollectionViewCell+Extension.swift in Sources */,
 				6728416624342BF200790CEE /* InsetTextView.swift in Sources */,
 				672841B524342BF200790CEE /* Sounds.swift in Sources */,

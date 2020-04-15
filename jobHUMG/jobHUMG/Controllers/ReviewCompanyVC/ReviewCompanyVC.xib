@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReviewCompanyVC" customModule="jobHUMG" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="hqW-Cu-Wq8" id="14U-zQ-1zO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -44,24 +45,10 @@
                         <constraint firstAttribute="bottom" secondItem="mwr-4n-lA2" secondAttribute="bottom" id="oqD-pq-WpN"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hqW-Cu-Wq8">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hqW-Cu-Wq8">
                     <rect key="frame" x="0.0" y="89" width="414" height="773"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMz-D8-dCz">
-                    <rect key="frame" x="321" y="744" width="68" height="68"/>
-                    <color key="backgroundColor" red="0.25882352939999997" green="0.63529411759999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="68" id="0ZR-bg-gmY"/>
-                        <constraint firstAttribute="width" constant="68" id="2il-NB-Dsn"/>
-                    </constraints>
-                    <state key="normal" image="ic_add"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="34"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -69,10 +56,8 @@
                 <constraint firstItem="xkD-Hn-IOT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2RW-WU-ag1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hqW-Cu-Wq8" secondAttribute="trailing" id="DhA-GA-blR"/>
                 <constraint firstItem="xkD-Hn-IOT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NzL-ax-4Xz"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="PMz-D8-dCz" secondAttribute="bottom" constant="50" id="iZH-A5-azZ"/>
                 <constraint firstItem="hqW-Cu-Wq8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jTY-fg-XcT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xkD-Hn-IOT" secondAttribute="trailing" id="mI1-uF-sbd"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PMz-D8-dCz" secondAttribute="trailing" constant="25" id="uwH-6L-qaV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hqW-Cu-Wq8" secondAttribute="bottom" id="xjN-Il-MSc"/>
                 <constraint firstItem="hqW-Cu-Wq8" firstAttribute="top" secondItem="xkD-Hn-IOT" secondAttribute="bottom" id="zrn-6u-afT"/>
             </constraints>
@@ -81,7 +66,6 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_add" width="31" height="31"/>
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
     </resources>
 </document>

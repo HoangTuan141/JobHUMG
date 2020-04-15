@@ -20,6 +20,22 @@ extension UIViewController: NVActivityIndicatorViewable {
     func hideLoading() {
         stopAnimating()
     }
+    
+    func setTabBarVisibile(_ visible: Bool, animated: Bool) -> Void {
+        var frame = self.tabBarController?.tabBar.frame
+        let height = frame!.size.height
+        if visible {
+            frame?.origin.y = self.tabBarController!.view.frame.size.height - height
+        } else {
+            frame?.origin.y = self.tabBarController!.view.frame.size.height - 0
+        }
+        let duration = animated ? 0.3 : 0.0
+        UIView.animate(withDuration: duration) { [weak self] in
+            if let this = self {
+                this.tabBarController?.tabBar.frame = frame!
+            }
+        }
+    }
 }
 
 extension UIViewController {
