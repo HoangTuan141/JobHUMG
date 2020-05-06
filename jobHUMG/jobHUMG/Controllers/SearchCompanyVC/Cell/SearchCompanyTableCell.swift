@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SearchCompanyTableCell: UITableViewCell {
-
+    @IBOutlet weak var companyImage: UIImageView!
+    @IBOutlet weak var companyNameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +24,8 @@ class SearchCompanyTableCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setupCell(image: String, companyName: String) {
+        companyImage.kf.setImage(with: URL(string: image))
+        companyNameLabel.text = companyName
+    }
 }

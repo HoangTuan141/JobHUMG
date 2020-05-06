@@ -92,5 +92,13 @@ extension UIViewController {
         popupVC.modalPresentationStyle = .overCurrentContext
         self.present(popupVC, animated: false, completion: nil)
     }
+    
+    func showDatePicker(onClickChoose: ((_ date : String) -> Void)?) {
+        let datePickerPopupVC = DatePickerPopupVC()
+        datePickerPopupVC.modalPresentationStyle = .currentContext
+        datePickerPopupVC.onClickChoose = { date in
+            onClickChoose?(date)
+        }
+    }
 }
 

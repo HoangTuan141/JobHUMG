@@ -9,6 +9,8 @@
 import UIKit
 
 class PostJobVC: UIViewController {
+    
+    // MARK: - Outlet
     @IBOutlet weak var salaryTextField: UITextField!
     @IBOutlet weak var careerTextField: UITextField!
     @IBOutlet weak var companyTextField: UITextField!
@@ -17,14 +19,15 @@ class PostJobVC: UIViewController {
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var heightAddressTextView: NSLayoutConstraint!
     @IBOutlet weak var heightDescriptionTextView: NSLayoutConstraint!
+    @IBOutlet weak var navigationView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        
     }
     
     private func setupView() {
+        navigationView.setGradientBackground(startColor: .mainColor, endColor: .rightGradientColor, gradientDirection: .leftToRight)
         addressTextView.placeholder = "Nhập địa chỉ công ty"
         addressTextView.heightDidChange = { [weak self] height in
             self?.heightAddressTextView.constant = height > 33 ? height : 33

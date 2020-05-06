@@ -17,6 +17,7 @@ class DetailPostFindJobVC: UIViewController {
     @IBOutlet weak var commentTextView: PlaceholderTextView!
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var heightCommentTextView: NSLayoutConstraint!
+    @IBOutlet weak var navigationView: UIView!
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -36,6 +37,7 @@ class DetailPostFindJobVC: UIViewController {
     }
     
     private func setupView() {
+        navigationView.setGradientBackground(startColor: .mainColor, endColor: .rightGradientColor, gradientDirection: .leftToRight)
         enableSendCommentButton(false)
         commentTextView.placeholder = "Viết comment..."
         commentTextView.colorBackground = .lineGray

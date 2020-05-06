@@ -10,21 +10,69 @@ import UIKit
 
 class ProfileVC: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupTableView()
         // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 1500
+        tableView.registerNibCellFor(type: ProfileTableViewCell.self)
+        tableView.registerNibCellFor(type: RecruitmentCell.self)
     }
-    */
 
+}
+extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return 1
+        default:
+            return 5
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.section {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath) as! ProfileTableViewCell
+            cell.selectionStyle = .none
+            cell.delegate = self
+            return cell
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "RecruitmentCell", for: indexPath) as! RecruitmentCell
+            return cell
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+}
+
+extension ProfileVC: ProfileTableViewCellDelegate {
+    func onClickLogOut() {
+        let loginVC = LoginVC()
+        let navigationController = UINavigationController(rootViewController: loginVC)
+        navigationController.isNavigationBarHidden =
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        appDelegate?.window?.rootViewController = navigationController
+        appDelegate?.window?.makeKeyAndVisible()
+    }
+    
+    func onClickEditProfile() {
+        let editProfileVC = EditProfileVC()
+        self.navigationController?.pushViewController(editProfileVC, animated: true)
+    }
+    
 }

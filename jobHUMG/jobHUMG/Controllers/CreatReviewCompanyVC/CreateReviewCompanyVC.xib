@@ -12,6 +12,7 @@
                 <outlet property="heightReviewTextView" destination="AAz-N2-MXh" id="tGb-dO-iEv"/>
                 <outlet property="nameTextField" destination="bta-8f-EBy" id="TKR-Ax-ZTg"/>
                 <outlet property="navigationView" destination="e0a-5n-0gq" id="CZI-Ct-BLd"/>
+                <outlet property="postButton" destination="P3Z-Y7-1cy" id="NbX-BX-1yc"/>
                 <outlet property="ratingView" destination="ZDl-gE-ewi" id="lX1-fb-buq"/>
                 <outlet property="reviewTextView" destination="CDc-6K-YaJ" id="CDl-X5-m84"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -43,22 +44,39 @@
                                 <action selector="backPressed:" destination="-1" eventType="touchUpInside" id="S9e-IM-oi5"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tạo review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vv-DC-EIP">
-                            <rect key="frame" x="165.5" y="56" width="83" height="20"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tạo review" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vv-DC-EIP">
+                            <rect key="frame" x="49" y="57" width="316" height="18"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3Z-Y7-1cy">
+                            <rect key="frame" x="365" y="44" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="hDQ-1L-Ysg"/>
+                                <constraint firstAttribute="width" constant="44" id="uIg-6Y-raC"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <state key="normal" title="Đăng">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="postPressed:" destination="-1" eventType="touchUpInside" id="WSz-9g-9DC"/>
+                            </connections>
+                        </button>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" red="0.25882352939999997" green="0.63529411759999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="P3Z-Y7-1cy" secondAttribute="trailing" constant="5" id="11j-Fx-O5F"/>
                         <constraint firstItem="9vv-DC-EIP" firstAttribute="centerX" secondItem="e0a-5n-0gq" secondAttribute="centerX" id="1cl-oN-Uwm"/>
                         <constraint firstAttribute="trailing" secondItem="pnX-qM-I0Y" secondAttribute="trailing" id="5XP-1k-s61"/>
                         <constraint firstItem="pnX-qM-I0Y" firstAttribute="top" secondItem="90k-g4-MlU" secondAttribute="bottom" id="GPl-WK-YCk"/>
                         <constraint firstAttribute="bottom" secondItem="pnX-qM-I0Y" secondAttribute="bottom" id="aIQ-Qm-kek"/>
                         <constraint firstItem="9vv-DC-EIP" firstAttribute="centerY" secondItem="90k-g4-MlU" secondAttribute="centerY" id="bm3-b2-MSI"/>
+                        <constraint firstItem="P3Z-Y7-1cy" firstAttribute="leading" secondItem="9vv-DC-EIP" secondAttribute="trailing" id="fhx-zw-5P7"/>
                         <constraint firstItem="pnX-qM-I0Y" firstAttribute="leading" secondItem="e0a-5n-0gq" secondAttribute="leading" id="ngo-ED-01o"/>
                         <constraint firstItem="90k-g4-MlU" firstAttribute="leading" secondItem="e0a-5n-0gq" secondAttribute="leading" id="p0u-hG-1zo"/>
+                        <constraint firstItem="pnX-qM-I0Y" firstAttribute="top" secondItem="P3Z-Y7-1cy" secondAttribute="bottom" id="tL7-Nz-0Rb"/>
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eiQ-HY-pGL">

@@ -27,8 +27,6 @@ class SearchCompanyVC: UIViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 1000
         tableView.registerNibCellFor(type: SearchCompanyTableCell.self)
     }
     
@@ -51,5 +49,13 @@ extension SearchCompanyVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailReviewVC = DetailReviewCompanyVC()
+        self.navigationController?.pushViewController(detailReviewVC, animated: true)
+    }
     
 }

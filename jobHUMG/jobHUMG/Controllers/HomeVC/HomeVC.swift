@@ -10,14 +10,20 @@ import UIKit
 
 class HomeVC: UIViewController {
    
+    @IBOutlet weak var navigationView: UIView!
     @IBOutlet weak var bottomPageView: NSLayoutConstraint!
     @IBOutlet weak var tablayoutView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
     }
     
     override func viewDidLayoutSubviews() {
         self.setTablayout(toView: tablayoutView, leftView: RecruitmentVC(), rightView: FindJobVC(), leftTitle: "TUYỂN DỤNG", rightTitle: "TÌM VIỆC")
+    }
+    
+    private func setupView() {
+        navigationView.setGradientBackground(startColor: .mainColor, endColor: .rightGradientColor, gradientDirection: .leftToRight)
     }
     
     @IBAction func postPressed(_ sender: Any) {

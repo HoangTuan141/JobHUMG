@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="jobHUMG" customModuleProvider="target">
             <connections>
                 <outlet property="bottomPageView" destination="pgi-gv-uZm" id="PIH-nf-thx"/>
+                <outlet property="navigationView" destination="Dan-rO-nuI" id="tzD-ug-x9e"/>
                 <outlet property="tablayoutView" destination="KGz-PN-YCR" id="hUT-Qo-mM3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,24 +23,17 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dan-rO-nuI">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="89"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navigation" translatesAutoresizingMaskIntoConstraints="NO" id="ldr-we-gQ2">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="89"/>
-                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trang chủ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tO-F6-x9I">
                             <rect key="frame" x="24" y="50" width="111.5" height="29"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" red="0.25882352939999997" green="0.63529411759999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="ldr-we-gQ2" secondAttribute="bottom" id="5oU-SI-Oia"/>
                         <constraint firstAttribute="bottom" secondItem="4tO-F6-x9I" secondAttribute="bottom" constant="10" id="Npd-0R-09m"/>
-                        <constraint firstItem="ldr-we-gQ2" firstAttribute="leading" secondItem="Dan-rO-nuI" secondAttribute="leading" id="kHP-JZ-S0c"/>
                         <constraint firstItem="4tO-F6-x9I" firstAttribute="leading" secondItem="Dan-rO-nuI" secondAttribute="leading" constant="24" id="pW2-mI-3oR"/>
-                        <constraint firstAttribute="trailing" secondItem="ldr-we-gQ2" secondAttribute="trailing" id="t5d-ZV-nZa"/>
-                        <constraint firstItem="ldr-we-gQ2" firstAttribute="top" secondItem="Dan-rO-nuI" secondAttribute="top" id="t6g-w2-wHc"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KGz-PN-YCR">
@@ -83,6 +77,5 @@
     </objects>
     <resources>
         <image name="ic_add" width="31" height="31"/>
-        <image name="navigation" width="375" height="132"/>
     </resources>
 </document>

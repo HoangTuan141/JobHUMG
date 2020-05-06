@@ -9,13 +9,20 @@
 import UIKit
 
 class ReviewCompanyVC: UIViewController {
-
+    
+    // MARK: - Outlet
+    @IBOutlet weak var navigationView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-
+        setupView()
+    }
+    
+    // MARK: - Method
+    private func setupView() {
+        navigationView.setGradientBackground(startColor: .mainColor, endColor: .rightGradientColor, gradientDirection: .leftToRight)
     }
     
     private func setupTableView() {
@@ -24,6 +31,18 @@ class ReviewCompanyVC: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 1000
         tableView.registerNibCellFor(type: ReviewCompanyCell.self)
+    }
+    
+    // MARK: - Action
+    @IBAction func searchPressed(_ sender: Any) {
+        let searchCompanyVC = SearchCompanyVC()
+        self.navigationController?.pushViewController(searchCompanyVC, animated: true)
+    }
+    
+    @IBAction func suggestCompanyPressed(_ sender: Any) {
+        let suggestPopup = SuggestCompanyPopupVC()
+        suggestPopup.modalPresentationStyle = .overCurrentContext
+        self.present(suggestPopup, animated: false, completion: nil)
     }
     
 }

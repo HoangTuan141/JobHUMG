@@ -17,6 +17,7 @@ class DetailPostJobVC: UIViewController {
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var commentTextView: PlaceholderTextView!
     @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var navigationView: UIView!
     
     // MARK: - Variable
     
@@ -39,6 +40,7 @@ class DetailPostJobVC: UIViewController {
     }
     
     private func setupView() {
+        navigationView.setGradientBackground(startColor: .mainColor, endColor: .rightGradientColor, gradientDirection: .leftToRight)
         enableSendCommentButton(false)
         commentTextView.placeholder = "Viết comment..."
         commentTextView.colorBackground = .lineGray

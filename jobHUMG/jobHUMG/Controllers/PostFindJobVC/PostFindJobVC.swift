@@ -10,6 +10,7 @@ import UIKit
 
 class PostFindJobVC: UIViewController {
 
+    @IBOutlet weak var navigationView: UIView!
     @IBOutlet weak var heightDescriptionTextView: NSLayoutConstraint!
     @IBOutlet weak var heightRegionTextView: NSLayoutConstraint!
     @IBOutlet weak var descriptionTextView: PlaceholderTextView!
@@ -39,6 +40,7 @@ class PostFindJobVC: UIViewController {
     private func setupView() {
         careerTextField.delegate = self
         self.endEditting()
+        navigationView.setGradientBackground(startColor: .mainColor, endColor: .rightGradientColor, gradientDirection: .leftToRight)
     }
     
     @IBAction func backPressed(_ sender: Any) {

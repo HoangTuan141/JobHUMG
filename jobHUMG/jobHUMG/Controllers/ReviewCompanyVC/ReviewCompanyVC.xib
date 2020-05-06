@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReviewCompanyVC" customModule="jobHUMG" customModuleProvider="target">
             <connections>
+                <outlet property="navigationView" destination="xkD-Hn-IOT" id="Zmk-yy-dQV"/>
                 <outlet property="tableView" destination="hqW-Cu-Wq8" id="14U-zQ-1zO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,7 +25,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review Công ty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiU-ED-BrC">
                             <rect key="frame" x="24" y="50" width="174" height="29"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                            <color key="textColor" red="0.25882352939999997" green="0.63529411759999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwr-4n-lA2">
@@ -33,15 +34,34 @@
                                 <constraint firstAttribute="width" constant="44" id="GFL-jY-JwG"/>
                                 <constraint firstAttribute="height" constant="44" id="X1B-Ca-NDv"/>
                             </constraints>
-                            <color key="tintColor" red="0.25882352939999997" green="0.63529411759999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" image="magnifyingglass" catalog="system"/>
+                            <connections>
+                                <action selector="searchPressed:" destination="-1" eventType="touchUpInside" id="wFb-f4-1rl"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmG-HZ-hjw">
+                            <rect key="frame" x="306" y="45" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="JLO-uM-9pf"/>
+                                <constraint firstAttribute="width" constant="44" id="XVW-X6-Bb5"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <state key="normal" title="+">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="suggestCompanyPressed:" destination="-1" eventType="touchUpInside" id="zQf-L3-49V"/>
+                            </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" red="0.25882352939999997" green="0.63529411759999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="BiU-ED-BrC" firstAttribute="leading" secondItem="xkD-Hn-IOT" secondAttribute="leading" constant="24" id="PZb-W4-YJY"/>
                         <constraint firstAttribute="bottom" secondItem="BiU-ED-BrC" secondAttribute="bottom" constant="10" id="YCM-0S-Oww"/>
                         <constraint firstAttribute="trailing" secondItem="mwr-4n-lA2" secondAttribute="trailing" id="b0i-ye-I7g"/>
+                        <constraint firstAttribute="bottom" secondItem="VmG-HZ-hjw" secondAttribute="bottom" id="ldY-fr-xpZ"/>
+                        <constraint firstItem="mwr-4n-lA2" firstAttribute="leading" secondItem="VmG-HZ-hjw" secondAttribute="trailing" constant="20" id="mL7-wq-G68"/>
                         <constraint firstAttribute="bottom" secondItem="mwr-4n-lA2" secondAttribute="bottom" id="oqD-pq-WpN"/>
                     </constraints>
                 </view>
