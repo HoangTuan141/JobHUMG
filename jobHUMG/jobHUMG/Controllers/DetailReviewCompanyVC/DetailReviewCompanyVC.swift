@@ -57,7 +57,7 @@ extension DetailReviewCompanyVC: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 1
         default:
-            return 5
+            return 1
         }
     }
     
@@ -66,6 +66,7 @@ extension DetailReviewCompanyVC: UITableViewDelegate, UITableViewDataSource {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewCompanyCell", for: indexPath) as! ReviewCompanyCell
             cell.selectionStyle = .none
+            cell.fillDataTest(avatar: reviewAvatar[indexPath.row], name: reviewName[indexPath.row], rate: Double(reviewStar[indexPath.row]))
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewTableViewCell", for: indexPath) as! ReviewTableViewCell

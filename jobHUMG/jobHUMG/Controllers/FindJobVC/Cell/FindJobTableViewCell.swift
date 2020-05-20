@@ -44,6 +44,16 @@ class FindJobTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    func fillData(avatar: String, name: String, time: String, career: String, region: String, description: String) {
+        avatarImage.image = UIImage(named: avatar)
+        nameLabel.text = name
+        timeLabel.text = time
+        careerLabel.text = career
+        addressLabel.text = region
+        descriptionLabel.text = description
+        
+    }
+    
     // MARK: - Action
     @IBAction func likePressed(_ sender: Any) {
         

@@ -35,6 +35,7 @@ extension FindJobVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FindJobTableViewCell", for: indexPath) as! FindJobTableViewCell
         cell.selectionStyle = .none
         cell.isHiddentMoreButton = true
+        cell.fillData(avatar: findJobAvatar[indexPath.row], name: findJobName[indexPath.row], time: findJobTime[indexPath.row], career: findJobCareer[indexPath.row], region: "Hà Nội", description: findJobDescription[indexPath.row])
         return cell
     }
     

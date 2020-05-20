@@ -375,7 +375,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GB5-uB-c0K">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_profile" translatesAutoresizingMaskIntoConstraints="NO" id="GB5-uB-c0K">
                                             <rect key="frame" x="143" y="50" width="128" height="128"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="128" id="5td-sG-xKp"/>
@@ -481,5 +481,6 @@
     </objects>
     <resources>
         <image name="ic_back_white" width="12" height="22"/>
+        <image name="ic_profile" width="24" height="24"/>
     </resources>
 </document>

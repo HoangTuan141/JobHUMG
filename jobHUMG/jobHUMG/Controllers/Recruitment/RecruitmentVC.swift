@@ -29,13 +29,14 @@ class RecruitmentVC: UIViewController {
 
 extension RecruitmentVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecruitmentCell", for: indexPath) as! RecruitmentCell
         cell.selectionStyle = .none
         cell.isHiddentMoreButton = true
+        cell.fillData(avatar: findJobAvatar[indexPath.row], name: findJobName[indexPath.row], time: findJobTime[indexPath.row], company: recruitmentCompany[indexPath.row], salary: recruitmentSalary[indexPath.row], description: recruitmentDescription[indexPath.row])
         return cell
     }
     

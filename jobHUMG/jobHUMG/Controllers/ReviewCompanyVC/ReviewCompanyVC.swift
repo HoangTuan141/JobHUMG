@@ -49,13 +49,13 @@ class ReviewCompanyVC: UIViewController {
 
 extension ReviewCompanyVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewCompanyCell", for: indexPath) as! ReviewCompanyCell
         cell.selectionStyle = .none
-        cell.setupCell(image: "", name: "Sun*", rate: Double(indexPath.row), totalReview: indexPath.row + 5, career: "IT", location: "Keangnam")
+        cell.fillDataTest(avatar: reviewAvatar[indexPath.row], name: reviewName[indexPath.row], rate: Double(reviewStar[indexPath.row]))
         return cell
     }
     

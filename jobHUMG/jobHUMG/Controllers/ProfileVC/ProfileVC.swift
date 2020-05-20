@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ProfileVC: UIViewController {
 
@@ -25,7 +26,8 @@ class ProfileVC: UIViewController {
         tableView.registerNibCellFor(type: ProfileTableViewCell.self)
         tableView.registerNibCellFor(type: RecruitmentCell.self)
     }
-
+    
+   
 }
 extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -36,7 +38,7 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 1
         default:
-            return 5
+            return 1
         }
     }
     
@@ -49,6 +51,7 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "RecruitmentCell", for: indexPath) as! RecruitmentCell
+            cell.fillData(avatar: "avatar1", name: "Hoàng Anh Tuấn", time: findJobTime[indexPath.row], company: recruitmentCompany[indexPath.row], salary: recruitmentSalary[indexPath.row], description: recruitmentDescription[indexPath.row])
             return cell
         }
         
@@ -64,10 +67,12 @@ extension ProfileVC: ProfileTableViewCellDelegate {
     func onClickLogOut() {
         let loginVC = LoginVC()
         let navigationController = UINavigationController(rootViewController: loginVC)
-        navigationController.isNavigationBarHidden =
+        navigationController.isNavigationBarHidden = true
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         appDelegate?.window?.rootViewController = navigationController
         appDelegate?.window?.makeKeyAndVisible()
+        
+        
     }
     
     func onClickEditProfile() {

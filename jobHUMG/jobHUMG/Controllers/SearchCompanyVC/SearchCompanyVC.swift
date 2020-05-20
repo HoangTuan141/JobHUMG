@@ -41,11 +41,12 @@ class SearchCompanyVC: UIViewController {
 
 extension SearchCompanyVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCompanyTableCell", for: indexPath) as! SearchCompanyTableCell
+        cell.setupCell(image: reviewAvatar[indexPath.row], companyName: reviewName[indexPath.row])
         return cell
     }
     

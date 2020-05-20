@@ -45,8 +45,21 @@ class RecruitmentCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    @IBAction func morePressed(_ sender: Any) {
+    
+    func fillData(avatar: String,  name: String, time: String, company: String, salary: String, description: String) {
+        avatarImage.image = UIImage(named: avatar)
+        nameLabel.text = name
+        timeLabel.text = time
+        companyNameLabel.text = company
+        salaryLabel.text = salary
+        descriptionLabel.text = description
+        
     }
+    
+    @IBAction func morePressed(_ sender: Any) {
+        
+    }
+    
     @IBAction func likePressed(_ sender: Any) {
         
     }

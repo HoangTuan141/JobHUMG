@@ -84,7 +84,7 @@ extension DetailPostFindJobVC: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 1
         default:
-            return 5
+            return 1
         }
     }
     
@@ -94,6 +94,8 @@ extension DetailPostFindJobVC: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "FindJobTableViewCell", for: indexPath) as! FindJobTableViewCell
             cell.isHiddenSeparator = true
             cell.selectionStyle = .none
+            cell.fillData(avatar: findJobAvatar[0], name: findJobName[0], time: findJobTime[0], career: findJobCareer[0], region: "Hà Nội", description: findJobDescription[0])
+            cell.isHiddentMoreButton = true
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "CommentTableViewCell", for: indexPath) as! CommentTableViewCell

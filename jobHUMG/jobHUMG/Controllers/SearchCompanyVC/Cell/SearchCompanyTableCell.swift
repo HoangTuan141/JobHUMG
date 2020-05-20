@@ -25,7 +25,8 @@ class SearchCompanyTableCell: UITableViewCell {
     }
     
     func setupCell(image: String, companyName: String) {
-        companyImage.kf.setImage(with: URL(string: image))
+//        companyImage.kf.setImage(with: URL(string: image))
+        companyImage.image = UIImage(named: image)
         companyNameLabel.text = companyName
     }
 }

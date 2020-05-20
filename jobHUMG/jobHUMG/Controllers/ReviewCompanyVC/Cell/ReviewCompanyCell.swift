@@ -31,6 +31,13 @@ class ReviewCompanyCell: UITableViewCell {
         careerLabel.text = career
         locationLabel.text = location
     }
+    
+    func fillDataTest (avatar: String, name: String, rate: Double) {
+        companyImage.image = UIImage(named: avatar)
+        companyNameLabel.text = name
+        ratingView.rating = rate
+        ratingView.text = "(5)"
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
