@@ -17,11 +17,11 @@ struct APIRequest {
     var header: HTTPHeaders?
     var parameters: [String:Any]?
     var fullUrl: String {
-        return "http://mobi.kindergreen.vn/api/" + path
+        return "http://45.63.104.21:8080/" + path
     }
 
     static var bearerHeader: [String: String] {
-        return ["X-Requested-With": "XMLHttpRequest"]
+        return ["Authorization" :  "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC80NS42My4xMDQuMjE6ODA4MFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU5MjU4MzUzNCwiZXhwIjoxNTkyNTg3MTM0LCJuYmYiOjE1OTI1ODM1MzQsImp0aSI6IkEyUlplY3RaWDVQYno1ODciLCJzdWIiOjQsInBydiI6ImMyMjkxMzFhYjI4NGRkNDAyMjA1MGQ3OTU0YzFjMzE1YzcyYzQ2YjMifQ.Wwa597CWpbZ1Vy-1CYniSd5VAwi6AY64nsLdfSIhnrk"]
         
     }
 
@@ -29,7 +29,7 @@ struct APIRequest {
          path: String,
          method: Alamofire.HTTPMethod,
          header: HTTPHeaders = [:],
-         parameters: [String: Any]) {
+         parameters: [String: Any]?) {
         self.name = name
         self.path = path
         self.method = method
@@ -42,7 +42,7 @@ struct APIRequest {
         print("URL: => \(fullUrl)")
         print("Method: => \(method.rawValue)")
         print("Header: => \( header!)")
-        print("Parameters: => \(parameters!)\n")
+        print("Parameters: => \(parameters ?? ["":""])\n")
     }
 }
 

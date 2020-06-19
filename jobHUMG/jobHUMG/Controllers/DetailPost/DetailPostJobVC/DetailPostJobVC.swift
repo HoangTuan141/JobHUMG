@@ -20,11 +20,14 @@ class DetailPostJobVC: UIViewController {
     @IBOutlet weak var navigationView: UIView!
     
     // MARK: - Variable
-    
+    var id: Int?
+    var detailPost: DataDetailRecruitmentPost?
+    var listComment = [CommentDetailRecruitmentPost]()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        getDetailPost()
         setupView()
         setupTableView()
     }
@@ -67,6 +70,16 @@ class DetailPostJobVC: UIViewController {
             sendButton.setImage(#imageLiteral(resourceName: "ic_send_gray"), for: .normal)
         }
     }
+    
+    func getDetailPost() {
+        DetailRecruitmentPostAPI(id: self.id ?? 0).excute(target: self, success: { [weak self] response in
+            self?.detailPost = response?.data
+            self?.listComment = (response?.data!.comment)!
+            self?.tableView.reloadData()
+        }, error: { [weak self] err in
+            
+        })
+    }
    
     // MARK: - ACTION
     @IBAction func backPressed(_ sender: Any) {
@@ -85,7 +98,7 @@ extension DetailPostJobVC: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 1
         default:
-            return 1
+            return listComment.count
         }
     }
     
@@ -95,8 +108,10 @@ extension DetailPostJobVC: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "RecruitmentCell", for: indexPath) as! RecruitmentCell
             cell.isHiddenSeparator = true
             cell.selectionStyle = .none
-            cell.fillData(avatar: findJobAvatar[0], name: findJobName[0], time: findJobTime[0], company: recruitmentCompany[0], salary: recruitmentSalary[0], description: recruitmentDescription[0])
             cell.isHiddentMoreButton = true
+            if let data = self.detailPost {
+                cell.fillDataDetail(data: data)
+            }
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "CommentTableViewCell", for: indexPath) as! CommentTableViewCell

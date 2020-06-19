@@ -10,12 +10,12 @@ import UIKit
 
 class RegisterVC: UIViewController {
     //MARK: - OUTLET
-    @IBOutlet weak var accountTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
-    @IBOutlet weak var agreePolicyButton: UIButton!
-    @IBOutlet weak var policyLabel: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var reTypePasswordTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    
     
     private var isSelectedPolicy = false
     //MARK: LIFE CYCLE
@@ -27,11 +27,11 @@ class RegisterVC: UIViewController {
     
     //MARK: - FUNCTION
     private func setupView() {
-        policyLabel.underlineAttribute(text: "Tôi đã đọc và đồng ý với điều khoản sử dụng")
         self.endEditting()
-        accountTextField.delegate = self
+        emailTextField.delegate = self
         passwordTextField.delegate = self
-        reTypePasswordTextField.delegate = self
+        lastNameTextField.delegate = self
+        firstNameTextField.delegate = self
     }
     
     //MARK: - ACTION
@@ -39,33 +39,25 @@ class RegisterVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func agreePolicyPressed(_ sender: Any) {
-        isSelectedPolicy = !isSelectedPolicy
-        if isSelectedPolicy {
-            agreePolicyButton.setImage(#imageLiteral(resourceName: "ic_checkbox"), for: .normal)
-        } else {
-            agreePolicyButton.setImage(nil, for: .normal)
-        }
-    }
-    
-    @IBAction func showPolicyPressed(_ sender: Any) {
-        
-    }
-    
     @IBAction func registerPressed(_ sender: Any) {
-        
+        RegisterAPI(email: emailTextField.text!, password: passwordTextField.text!, firstName: firstNameTextField.text!, lastName: lastNameTextField.text!).excute(target: self, success: { [weak self] response in
+        }, error: { [weak self] error in
+            
+        })
     }
     
 }
 
 extension RegisterVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == accountTextField {
+        if textField == emailTextField {
             passwordTextField.becomeFirstResponder()
         } else if textField == passwordTextField {
-            reTypePasswordTextField.becomeFirstResponder()
-        } else if textField == reTypePasswordTextField {
-            reTypePasswordTextField.resignFirstResponder()
+            lastNameTextField.becomeFirstResponder()
+        } else if textField == lastNameTextField {
+            firstNameTextField.becomeFirstResponder()
+        } else if textField == firstNameTextField {
+            firstNameTextField.resignFirstResponder()
         }
         return true
     }

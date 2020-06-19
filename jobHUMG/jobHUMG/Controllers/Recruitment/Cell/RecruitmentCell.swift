@@ -46,16 +46,6 @@ class RecruitmentCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func fillData(avatar: String,  name: String, time: String, company: String, salary: String, description: String) {
-        avatarImage.image = UIImage(named: avatar)
-        nameLabel.text = name
-        timeLabel.text = time
-        companyNameLabel.text = company
-        salaryLabel.text = salary
-        descriptionLabel.text = description
-        
-    }
-    
     @IBAction func morePressed(_ sender: Any) {
         
     }
@@ -66,5 +56,29 @@ class RecruitmentCell: UITableViewCell {
     
     @IBAction func commentPressed(_ sender: Any) {
         
+    }
+}
+
+extension RecruitmentCell {
+    func fillData(data: DataListRecruitmentPost) {
+        avatarImage.image = UIImage(named: data.userAvatar)
+        nameLabel.text = data.userName
+        timeLabel.text = "\(data.createdAt)"
+        companyNameLabel.text = data.companyName
+        salaryLabel.text = data.wage
+        descriptionLabel.text = data.description
+        likeLabel.text = "\(data.likeCount)"
+        commentLabel.text = "\(data.commentCount)"
+    }
+    
+    func fillDataDetail(data: DataDetailRecruitmentPost) {
+        avatarImage.image = UIImage(named: data.userAvatar)
+        nameLabel.text = data.userName
+        timeLabel.text = "\(data.createdAt)"
+        companyNameLabel.text = data.companyName
+        salaryLabel.text = data.wage
+        descriptionLabel.text = data.description
+        likeLabel.text = "\(data.likeCount)"
+        commentLabel.text = "\(data.commentCount)"
     }
 }

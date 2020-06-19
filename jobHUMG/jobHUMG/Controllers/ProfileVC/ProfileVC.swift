@@ -51,7 +51,6 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "RecruitmentCell", for: indexPath) as! RecruitmentCell
-            cell.fillData(avatar: "avatar1", name: "Hoàng Anh Tuấn", time: findJobTime[indexPath.row], company: recruitmentCompany[indexPath.row], salary: recruitmentSalary[indexPath.row], description: recruitmentDescription[indexPath.row])
             return cell
         }
         

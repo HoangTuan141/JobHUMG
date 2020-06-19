@@ -10,13 +10,21 @@ import UIKit
 
 class RecruitmentVC: UIViewController {
 
+    // MARK: - OUTLET
     @IBOutlet weak var tableView: UITableView!
+    
+    
+    // MARK: - Variable
+    var listPost = [DataListRecruitmentPost]()
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupTableView()
+        getListRecruitmentPost()
     }
     
+    // MARK: Method
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -24,19 +32,27 @@ class RecruitmentVC: UIViewController {
         tableView.estimatedRowHeight = 1000
         tableView.registerNibCellFor(type: RecruitmentCell.self)
     }
-
+    
+    private func getListRecruitmentPost() {
+        ListRecruitmentPostAPI().excute(target: self, success: { [weak self] response in
+            self?.listPost = response!.data
+            self?.tableView.reloadData()
+        },error: {[weak self] error in
+            print(error)
+            })
+    }
 }
 
 extension RecruitmentVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return listPost.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecruitmentCell", for: indexPath) as! RecruitmentCell
         cell.selectionStyle = .none
         cell.isHiddentMoreButton = true
-        cell.fillData(avatar: findJobAvatar[indexPath.row], name: findJobName[indexPath.row], time: findJobTime[indexPath.row], company: recruitmentCompany[indexPath.row], salary: recruitmentSalary[indexPath.row], description: recruitmentDescription[indexPath.row])
+        cell.fillData(data: listPost[indexPath.row])
         return cell
     }
     
@@ -46,6 +62,7 @@ extension RecruitmentVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailPostJobVC()
+        vc.id = listPost[indexPath.row].id
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

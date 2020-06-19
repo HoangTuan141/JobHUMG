@@ -33,10 +33,14 @@ class LoginVC: UIViewController {
     
     //MARK: - ACTION
     @IBAction func loginPressed(_ sender: Any) {
-        let tabBar = TabBar()
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        appDelegate?.window?.rootViewController = tabBar
-        appDelegate?.window?.makeKeyAndVisible()
+        LoginAPI(email: accountTextField.text!, password: passwordTextField.text!).excute(target: self, success: { [weak self] response in
+            let tabBar = TabBar()
+            let appDelegate = UIApplication.shared.delegate as? AppDelegate
+            appDelegate?.window?.rootViewController = tabBar
+            appDelegate?.window?.makeKeyAndVisible()
+        }, error: { [weak self] error in
+            print(error)
+        })
     }
     
     @IBAction func registerPressed(_ sender: Any) {
