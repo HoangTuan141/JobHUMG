@@ -41,6 +41,15 @@ class RecruitmentVC: UIViewController {
             print(error)
             })
     }
+    
+    private func likePost(id: Int) {
+        LikePostAPI(id: id).excute(target: self, success: { [weak self] response in
+            print(response)
+            self?.getListRecruitmentPost()
+        }, error: { [weak self] error in
+            print(error)
+        })
+    }
 }
 
 extension RecruitmentVC: UITableViewDelegate, UITableViewDataSource {
@@ -53,6 +62,18 @@ extension RecruitmentVC: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         cell.isHiddentMoreButton = true
         cell.fillData(data: listPost[indexPath.row])
+        
+        cell.tapCommentButton = { [weak self] in
+            let vc = DetailPostJobVC()
+            vc.id = self?.listPost[indexPath.row].id
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        cell.tapLikeButton = { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.likePost(id: strongSelf.listPost[indexPath.row].id)
+        }
+        
         return cell
     }
     

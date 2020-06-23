@@ -21,8 +21,7 @@ struct APIRequest {
     }
 
     static var bearerHeader: [String: String] {
-        return ["Authorization" :  "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC80NS42My4xMDQuMjE6ODA4MFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU5Mjg0MTg5MiwiZXhwIjoxNTkyODQ1NDkyLCJuYmYiOjE1OTI4NDE4OTIsImp0aSI6Ims5MXBHcTI0SU4wT08xNmQiLCJzdWIiOjQsInBydiI6ImMyMjkxMzFhYjI4NGRkNDAyMjA1MGQ3OTU0YzFjMzE1YzcyYzQ2YjMifQ.OdJV68m37CRUTOOu5lMkDWGpn88E-b8xNVuL6Fxli-o"]
-        
+        return ["Authorization" :  "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC80NS42My4xMDQuMjE6ODA4MFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU5MjkyODYxMiwiZXhwIjoxNTkyOTMyMjEyLCJuYmYiOjE1OTI5Mjg2MTIsImp0aSI6ImZzZzE5b1VHSktXWnFkVFkiLCJzdWIiOjQsInBydiI6ImMyMjkxMzFhYjI4NGRkNDAyMjA1MGQ3OTU0YzFjMzE1YzcyYzQ2YjMifQ.omrWe_XJgp1R49NKhp4iH6zTdil7tEi-cIiXp39hnYM"]
     }
 
     init(name: String,

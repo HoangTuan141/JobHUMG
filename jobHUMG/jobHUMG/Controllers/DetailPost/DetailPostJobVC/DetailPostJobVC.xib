@@ -110,6 +110,9 @@
                                 <constraint firstAttribute="width" constant="42" id="WTO-wU-Nqe"/>
                             </constraints>
                             <state key="normal" image="ic_send_gray"/>
+                            <connections>
+                                <action selector="commentPressed:" destination="-1" eventType="touchUpInside" id="ft8-uU-yEU"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

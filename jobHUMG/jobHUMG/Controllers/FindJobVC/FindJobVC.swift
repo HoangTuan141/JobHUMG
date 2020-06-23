@@ -36,6 +36,15 @@ class FindJobVC: UIViewController {
             
         })
     }
+    
+    private func likePost(id: Int) {
+        LikePostAPI(id: id).excute(target: self, success: { [weak self] response in
+            print(response)
+            self?.getListPostFindJob()
+        }, error: { [weak self] error in
+            print(error)
+        })
+    }
 }
 
 extension FindJobVC: UITableViewDelegate, UITableViewDataSource {
@@ -48,6 +57,18 @@ extension FindJobVC: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         cell.isHiddentMoreButton = true
         cell.fillData(data: listPostFindJob[indexPath.row])
+        
+        cell.tapCommentButton = { [weak self] in
+            let detailVC = DetailPostFindJobVC()
+            detailVC.id = self?.listPostFindJob[indexPath.row].id
+            self?.navigationController?.pushViewController(detailVC, animated: true)
+        }
+        
+        cell.tapLikeButton = { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.likePost(id: strongSelf.listPostFindJob[indexPath.row].id)
+        }
+        
         return cell
     }
     

@@ -71,12 +71,20 @@ class DetailPostJobVC: UIViewController {
         }
     }
     
-    func getDetailPost() {
+    private func getDetailPost() {
         DetailRecruitmentPostAPI(id: self.id ?? 0).excute(target: self, success: { [weak self] response in
             self?.detailPost = response?.data
             self?.listComment = (response?.data!.comment)!
             self?.tableView.reloadData()
-        }, error: { [weak self] err in
+        }, error: { [weak self] error in
+
+        })
+    }
+    
+    private func commentPost(content: String) {
+        CommentPostAPI(content: content, postId: self.id ?? 0, type: "comment_post").excute(target: self, success: { [weak self] response in
+            self?.getDetailPost()
+        }, error: { [weak self] error in
             
         })
     }
@@ -86,6 +94,9 @@ class DetailPostJobVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func commentPressed(_ sender: Any) {
+        commentPost(content: commentTextView.textView.text!)
+    }
 }
 
 extension DetailPostJobVC: UITableViewDelegate, UITableViewDataSource {
@@ -116,6 +127,7 @@ extension DetailPostJobVC: UITableViewDelegate, UITableViewDataSource {
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "CommentTableViewCell", for: indexPath) as! CommentTableViewCell
             cell.selectionStyle = .none
+            cell.fillData(data: listComment[indexPath.row])
             return cell
         }
     }

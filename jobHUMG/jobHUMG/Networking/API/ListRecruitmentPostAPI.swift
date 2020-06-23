@@ -35,6 +35,7 @@ struct DataListRecruitmentPost: Response {
     var userName: String
     var userAvatar: String
     var createdAt: Int
+    var isLike: Bool
     
     init(json: JSON) {
         self.id = json["id"].intValue
@@ -50,6 +51,7 @@ struct DataListRecruitmentPost: Response {
         self.userName = json["user_name"].stringValue
         self.userAvatar = json["user_avatar"].stringValue
         self.createdAt = json["created_at"].intValue
+        self.isLike = json["is_liked"].boolValue
     }
 }
 

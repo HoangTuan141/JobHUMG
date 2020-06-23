@@ -24,4 +24,9 @@ class CommentTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func fillData(data: CommentDetailRecruitmentPost) {
+        contentLabel.text = data.content
+        nameLabel.text = data.userName
+    }
+    
 }

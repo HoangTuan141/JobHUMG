@@ -36,6 +36,10 @@ class FindJobTableViewCell: UITableViewCell {
         }
     }
     
+    var tapMoreButton: (() -> Void)?
+    var tapLikeButton: (() -> Void)?
+    var tapCommentButton: (() -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -46,14 +50,15 @@ class FindJobTableViewCell: UITableViewCell {
     
     // MARK: - Action
     @IBAction func likePressed(_ sender: Any) {
-        
+        self.tapLikeButton?()
     }
     
     @IBAction func commentPressed(_ sender: Any) {
-        
+        self.tapCommentButton?()
     }
     
     @IBAction func morePressed(_ sender: Any) {
+        self.tapMoreButton?()
     }
 }
 
@@ -65,7 +70,8 @@ extension FindJobTableViewCell {
         careerLabel.text = data.career
         addressLabel.text = data.location
         descriptionLabel.text = data.description
-        
+        likeLabel.text = "\(data.likeCount)"
+        commentLabel.text = "\(data.commentCount)"
     }
     
     func fillData(data: DataDetailPostFindJob) {
@@ -75,5 +81,7 @@ extension FindJobTableViewCell {
         careerLabel.text = data.career
         addressLabel.text = data.location
         descriptionLabel.text = data.description
+        likeLabel.text = "\(data.likeCount)"
+        commentLabel.text = "\(data.commentCount)"
     }
 }

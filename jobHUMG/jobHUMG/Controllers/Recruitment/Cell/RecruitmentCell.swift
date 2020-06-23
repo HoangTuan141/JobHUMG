@@ -35,6 +35,10 @@ class RecruitmentCell: UITableViewCell {
         }
     }
     
+    var tapMoreButton: (() -> Void)?
+    var tapLikeButton: (() -> Void)?
+    var tapCommentButton: (() -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -47,15 +51,15 @@ class RecruitmentCell: UITableViewCell {
     }
     
     @IBAction func morePressed(_ sender: Any) {
-        
+        self.tapMoreButton?()
     }
     
     @IBAction func likePressed(_ sender: Any) {
-        
+        self.tapLikeButton?()
     }
     
     @IBAction func commentPressed(_ sender: Any) {
-        
+        self.tapCommentButton?()
     }
 }
 
