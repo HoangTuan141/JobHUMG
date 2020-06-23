@@ -64,8 +64,10 @@ extension RecruitmentCell {
         avatarImage.image = UIImage(named: data.userAvatar)
         nameLabel.text = data.userName
         timeLabel.text = "\(data.createdAt)"
+        careerLabel.text = data.career
         companyNameLabel.text = data.companyName
         salaryLabel.text = data.wage
+        addressLabel.text = data.location
         descriptionLabel.text = data.description
         likeLabel.text = "\(data.likeCount)"
         commentLabel.text = "\(data.commentCount)"
@@ -75,8 +77,10 @@ extension RecruitmentCell {
         avatarImage.image = UIImage(named: data.userAvatar)
         nameLabel.text = data.userName
         timeLabel.text = "\(data.createdAt)"
+        careerLabel.text = data.career
         companyNameLabel.text = data.companyName
         salaryLabel.text = data.wage
+        addressLabel.text = data.location
         descriptionLabel.text = data.description
         likeLabel.text = "\(data.likeCount)"
         commentLabel.text = "\(data.commentCount)"

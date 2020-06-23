@@ -11,10 +11,13 @@ import UIKit
 class FindJobVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    private var listPostFindJob = [DataListPostFindJob]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupTableView()
+        getListPostFindJob()
     }
 
     private func setupTableView() {
@@ -24,23 +27,33 @@ class FindJobVC: UIViewController {
         tableView.estimatedRowHeight = 1000
         tableView.registerNibCellFor(type: FindJobTableViewCell.self)
     }
+    
+    private func getListPostFindJob() {
+        ListPostFindJobAPI().excute(target: self, success: { [weak self] response in
+            self?.listPostFindJob = response!.data
+            self?.tableView.reloadData()
+        }, error: { [weak self] error in
+            
+        })
+    }
 }
 
 extension FindJobVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return listPostFindJob.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FindJobTableViewCell", for: indexPath) as! FindJobTableViewCell
         cell.selectionStyle = .none
         cell.isHiddentMoreButton = true
-        cell.fillData(avatar: findJobAvatar[indexPath.row], name: findJobName[indexPath.row], time: findJobTime[indexPath.row], career: findJobCareer[indexPath.row], region: "Hà Nội", description: findJobDescription[indexPath.row])
+        cell.fillData(data: listPostFindJob[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = DetailPostFindJobVC()
+        detailVC.id = listPostFindJob[indexPath.row].id
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
     

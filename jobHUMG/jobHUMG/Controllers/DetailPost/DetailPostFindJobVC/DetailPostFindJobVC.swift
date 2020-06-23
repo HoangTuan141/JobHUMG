@@ -19,11 +19,18 @@ class DetailPostFindJobVC: UIViewController {
     @IBOutlet weak var heightCommentTextView: NSLayoutConstraint!
     @IBOutlet weak var navigationView: UIView!
     
+    // MARK: - Variable
+    var id: Int?
+    private var postFindJob: DataDetailPostFindJob?
+    private var listComment = [CommentDetailPostFindJob]()
+    
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         setupTableView()
+        getDetailPostFindJob()
     }
     
     // MARK: - Function
@@ -55,6 +62,16 @@ class DetailPostFindJobVC: UIViewController {
         }
     }
     
+    func getDetailPostFindJob() {
+        DetailPostFindJobAPI(id: self.id ?? 0).excute(target: self, success: { [weak self] response in
+            self?.postFindJob = response?.data
+            self?.listComment = (response?.data!.comment)!
+            self?.tableView.reloadData()
+        }, error: { [weak self] error in
+            
+        })
+    }
+    
     func enableSendCommentButton( _ isUserInteractionEnabled: Bool) {
         if isUserInteractionEnabled {
             sendButton.isUserInteractionEnabled = true
@@ -84,7 +101,7 @@ extension DetailPostFindJobVC: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 1
         default:
-            return 1
+            return listComment.count
         }
     }
     
@@ -94,7 +111,9 @@ extension DetailPostFindJobVC: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "FindJobTableViewCell", for: indexPath) as! FindJobTableViewCell
             cell.isHiddenSeparator = true
             cell.selectionStyle = .none
-            cell.fillData(avatar: findJobAvatar[0], name: findJobName[0], time: findJobTime[0], career: findJobCareer[0], region: "Hà Nội", description: findJobDescription[0])
+            if let detailPostFindJob = self.postFindJob {
+                cell.fillData(data: detailPostFindJob)
+            }
             cell.isHiddentMoreButton = true
             return cell
         default:
